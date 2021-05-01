@@ -7,9 +7,7 @@ function getTokenPayload(token) {
 
 function getUserId(req, authToken) {
   if (req) {
-    console.log("here")
     const authHeader = req.headers.authorization;
-    console.log(authHeader);
     if (authHeader) {
       const token = authHeader.replace('Bearer ', '');
       if (!token) {
